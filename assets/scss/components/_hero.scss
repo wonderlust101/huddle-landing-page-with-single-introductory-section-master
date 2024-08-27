@@ -1,0 +1,35 @@
+@use '../abstract' as a;
+
+.hero {
+  display: grid;
+  @include a.set-grid-areas(image, text);
+  gap: 4rem;
+  justify-items: center;
+  align-items: center;
+  width: 80%;
+  text-align: center;
+
+  @include a.breakpoint(medium) {
+    justify-items: flex-start;
+    grid-template: 'image text'/ auto 0.8fr;
+    width: min(90%, 90rem);
+    text-align: left;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__text-area {
+    display: grid;
+    gap: 1.5rem;
+    justify-items: center;
+    align-content: center;
+
+    @include a.breakpoint(medium) {
+      margin-top: 4rem;
+      align-content: flex-start;
+      justify-items: flex-start;
+    }
+  }
+}

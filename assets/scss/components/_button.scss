@@ -1,0 +1,23 @@
+@use '../abstract' as a;
+
+.button {
+  padding: 0.75rem 4rem;
+  color: var(--clr-primary-color-violet);
+  background-color: var(--clr-white);
+  border-radius: 50rem;
+  box-shadow: 2px 2px 30px var(--clr-box-shadow);
+  cursor: pointer;
+
+  &:hover {
+    color: var(--clr-white);
+    background-color: var(--clr-primary-color-soft-magenta);
+  }
+
+  &__hero {
+    width: 70%;
+
+    @include a.breakpoint(medium) {
+      width: auto;
+    }
+  }
+}

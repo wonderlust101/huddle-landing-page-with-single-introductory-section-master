@@ -1,0 +1,28 @@
+@use '../abstract' as a;
+
+.socials {
+  display: flex;
+  gap: 1rem;
+  width: 90%;
+  margin-bottom: 2rem;
+  justify-content: center;
+
+  @include a.breakpoint(medium) {
+    justify-content: flex-end;
+  }
+
+  & > * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 0.60rem;
+    border: 1px solid var(--clr-white);
+    border-radius: 50rem;
+    color: var(--clr-white);
+
+    &:hover {
+      color: var(--clr-primary-color-soft-magenta);
+      border: 1px solid var(--clr-primary-color-soft-magenta);
+    }
+  }
+}

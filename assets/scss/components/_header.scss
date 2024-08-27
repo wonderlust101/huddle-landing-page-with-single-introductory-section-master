@@ -1,0 +1,16 @@
+@use '../abstract' as a;
+
+.header {
+  margin-top: 1.75rem;
+  width: 90%;
+  display: flex;
+  justify-items: flex-start;
+
+  &__logo {
+    width: 9rem;
+
+    @include a.breakpoint(medium) {
+      width: 14rem;
+    }
+  }
+}

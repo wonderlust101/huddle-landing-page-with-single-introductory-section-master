@@ -3,3 +3,20 @@
 :root {
   @include a.map-to-root(clr, a.$colors);
 }
+
+body {
+  display: grid;
+  grid-template-rows: repeat(3, max-content);
+  justify-items: center;
+  gap: 5rem;
+  background-color: var(--clr-background);
+  background-image: url('../images/bg-mobile.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @include a.breakpoint(medium) {
+    grid-template-rows: auto 1fr auto;
+    background-image: url('../images/bg-desktop.svg');
+    background-size: cover;
+  }
+}
