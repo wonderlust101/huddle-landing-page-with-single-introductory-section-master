@@ -15,30 +15,31 @@
     <link rel="stylesheet" href="assets/css/main.css"/>
 </head>
 <body>
-    <header class="header">
-        <img class="header__logo" src="assets/images/logo.svg" alt="Huddle Logo">
+    <header class="header" role="banner">
+        <img class="header__logo" src="assets/images/logo.svg" alt="Huddle Logo" aria-hidden="true">
+        <h1 class="sr-only">Huddle: A communication platform</h1>
     </header>
 
-    <main class="hero">
-        <img class="hero__image" src="assets/images/illustration-mockups.svg" alt="">
+    <main class="hero" role="main">
+        <img class="hero__image" src="assets/images/illustration-mockups.svg" alt="Illustration of Huddle community platform mockups" role="presentation">
         <div class="hero__text-area">
             <h2>Build The Community Your Fans Will Love</h2>
 
             <p>Huddle re-imagines the way we build communities. You have a voice, but so does your audience.
                 Create connections with your users as you engage in genuine discussion.</p>
 
-            <a class="button button__hero">Register</a>
+            <a href="#" class="button button__hero">Register</a>
         </div>
     </main>
 
-    <footer class="socials">
-        <a href="https://www.facebook.com" target="_blank">
+    <footer class="socials" role="contentinfo">
+        <a href="https://www.facebook.com" target="_blank" aria-label="Huddle on Facebook">
             <i class="fa-fw fa-brands fa-facebook-f"></i>
         </a>
-        <a href="https://www.twitter.com" target="_blank">
+        <a href="https://www.twitter.com" target="_blank" aria-label="Huddle on Twitter">
             <i class="fa-fw fa-brands fa-x-twitter"></i>
         </a>
-        <a href="https://www.instagram.com" target="_blank">
+        <a href="https://www.instagram.com" target="_blank" aria-label="Huddle on Instagram">
             <i class="fa-fw fa-brands fa-instagram"></i>
         </a>
     </footer>
